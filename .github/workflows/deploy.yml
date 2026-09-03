@@ -1,10 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
+  # Trigger the workflow only when a version tag is pushed (e.g. v1.0.0)
   push:
-    branches: [ main ]
+    tags: [ 'v*' ]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
